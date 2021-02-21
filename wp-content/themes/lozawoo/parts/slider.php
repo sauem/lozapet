@@ -10,7 +10,7 @@
                 the_post();
                 ?>
                 <!-- Single Slide Start -->
-                <div class="ht-single-slide" style="background-image: url(<?= ASSET ?>/img/slider/1.jpg)">
+                <div class="ht-single-slide" style="background-image: url(<?= get_the_post_thumbnail_url(get_the_ID(),'full') ?>)">
                     <div class="ht-hero-content-one container">
                         <h3><?= get_the_excerpt() ?></h3>
                         <h1 class="cssanimation leDoorCloseLeft sequence"><?= get_the_title() ?></h1>

@@ -33,6 +33,23 @@
       margin-right: 7px;
       text-transform: uppercase; }
 
+.pro-price del bdi {
+  text-decoration: line-through;
+  color: #ccc; }
+
+.breadcrumb-area {
+  background: url("../img/banner/header.jpg") center center no-repeat; }
+
+.single-product-item {
+  padding: 0px 10px 30px; }
+
+.about-page {
+  text-align: center; }
+  .about-page h1 {
+    font-weight: bold; }
+  .about-page p {
+    font-size: 15px; }
+
 .price {
   color: #78a206;
   font-size: 16px;
@@ -49,6 +66,10 @@
 
 .form-row {
   flex-direction: column; }
+
+.single-featured-item,
+.single-product-item {
+  background: white !important; }
 
 .checkout-button {
   border: 2px solid #f6f5f1;

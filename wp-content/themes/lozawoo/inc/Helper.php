@@ -1,5 +1,5 @@
 <?php
-
+include "hooks.php";
 
 function dd($data)
 {

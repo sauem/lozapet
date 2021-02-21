@@ -22,23 +22,29 @@ get_header(); ?>
             </nav>
         </div>
     </div>
-<?php
-while ( have_posts() ) :
-    the_post();
+    <div class="shop-area pt-110 pb-100 bg-gray mb-95">
+        <div class="container">
+            <div class="row">
+                <?php
 
-    do_action( 'storefront_page_before' );
+                while (have_posts()) :
+                    the_post();
 
-    get_template_part( 'content', 'page' );
+                    do_action('storefront_page_before');
 
-    /**
-     * Functions hooked in to storefront_page_after action
-     *
-     * @hooked storefront_display_comments - 10
-     */
-    do_action( 'storefront_page_after' );
+                    get_template_part('content', 'page');
 
-endwhile; // End of the loop.
-?>
+                    /**
+                     * Functions hooked in to storefront_page_after action
+                     *
+                     * @hooked storefront_display_comments - 10
+                     */
+                    do_action('storefront_page_after');
 
+                endwhile; // End of the loop.
+                ?>
+            </div>
+        </div>
+    </div>
 <?php
 get_footer();

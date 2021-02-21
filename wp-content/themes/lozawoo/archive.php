@@ -8,32 +8,24 @@
  */
 
 get_header(); ?>
+<?php get_template_part('parts/bcread') ?>
+    <div class="shop-area pt-110 pb-100 bg-gray mb-95">
+        <div class="container">
+            <div class="row">
+                <?php if (have_posts()) : ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+                    <?php
+                    get_template_part('loop');
 
-		<?php if ( have_posts() ) : ?>
+                else :
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+                    get_template_part('content', 'none');
 
-			<?php
-			get_template_part( 'loop' );
-
-		else :
-
-			get_template_part( 'content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+                endif;
+                ?>
+            </div>
+        </div>
+    </div>
 
 <?php
-do_action( 'storefront_sidebar' );
 get_footer();
