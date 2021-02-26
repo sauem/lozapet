@@ -17,21 +17,10 @@
 
 defined('ABSPATH') || exit;
 ?>
-<div class="breadcrumb-area bg-12 text-center">
-    <div class="container">
-        <h1>My Cart</h1>
-        <nav aria-label="breadcrumb">
-            <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Cart</li>
-            </ul>
-        </nav>
-    </div>
-</div>
+
 <?php do_action('woocommerce_before_cart'); ?>
 
-
-<div class="cart-area table-area pt-110 pb-95">
+<div class="cart-area table-area pb-95">
     <div class="container">
         <form class="woocommerce-cart-form" action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
             <?php do_action('woocommerce_before_cart_table'); ?>

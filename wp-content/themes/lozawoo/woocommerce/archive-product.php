@@ -56,24 +56,13 @@ do_action('woocommerce_before_main_content');
                             </div>
                         </div>
                         <div class="shop-results-wrapper">
-                            <div class="shop-results"><span>Show:</span>
-                                <div class="shop-select">
-                                    <select name="number" id="number">
-                                        <option value="9">9</option>
-                                        <option value="25">25</option>
-                                        <option value="50">50</option>
-                                        <option value="75">75</option>
-                                        <option value="100">100</option>
-                                    </select>
-                                </div>
+                            <div class="shop-results">
                             </div>
                             <div class="shop-results"><span>Sort By:</span>
                                 <div class="shop-select">
-                                    <select name="sort" id="sort">
-                                        <option value="position">Default sorting</option>
-                                        <option value="p-name">Sort By Popularity</option>
-                                        <option value="p-price">Sort By Price</option>
-                                    </select>
+                                    <?php
+                                    echo woocommerce_catalog_ordering();
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +125,7 @@ do_action('woocommerce_before_main_content');
                         </div>
                     <?php } ?>
                 </div>
-
+                <?php wc_get_template_part('global/sidebar'); ?>
             </div>
         </div>
     </div>

@@ -4,22 +4,16 @@
         <div class="sidebar-widget">
             <h3>Categories</h3>
             <div class="sidebar-widget-option-wrapper">
-                <div class="sidebar-widget-option">
-                    <input type="checkbox" id="cat1">
-                    <label for="cat1">Categories1 <span>(4)</span></label>
-                </div>
-                <div class="sidebar-widget-option">
-                    <input type="checkbox" id="cat2">
-                    <label for="cat2">Categories2 <span>(5)</span></label>
-                </div>
-                <div class="sidebar-widget-option">
-                    <input type="checkbox" id="cat3">
-                    <label for="cat3">Categories5 <span>(3)</span></label>
-                </div>
-                <div class="sidebar-widget-option">
-                    <input type="checkbox" id="cat4">
-                    <label for="cat4">Categories6 <span>(3)</span></label>
-                </div>
+                <?php
+                $cats = wp_list_categories([
+                    'taxonomy' => 'category',
+                    'title_li' => '',
+                    'show_count' => true,
+                    'echo' => 0,
+                    'style' => 'none'
+                ]);
+                printf('<div class="sidebar-widget-option"><input type="checkbox"><label>%s</label></div>', $cats);
+                ?>
             </div>
         </div>
         <div class="sidebar-widget price-widget">
@@ -28,7 +22,7 @@
                 <div id="slider-range"></div>
                 <div class="price_slider_amount">
                     <div class="slider-values">
-                        <input type="text" id="amount" name="price"  placeholder="Add Your Price" />
+                        <input type="text" id="amount" name="price" placeholder="Add Your Price"/>
                     </div>
                 </div>
             </div>
@@ -78,5 +72,8 @@
     </div>
     <div class="sidebar-banner-img">
         <a href="#"><img src="<?= ASSET ?>/img/banner/6.png" alt=""></a>
+    </div>
+    <div class="sidebar-wrapper">
+        <?php echo dynamic_sidebar('Sidebar'); ?>
     </div>
 </div>
