@@ -17,7 +17,7 @@
 
     <?php wp_head(); ?>
 
-    <link rel="shortcut icon" type="image/x-icon" href="<?= ASSET ?>/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= get_site_icon_url() ?>">
 
     <!-- All css here -->
     <link rel="stylesheet" href="<?= ASSET ?>/css/bootstrap.min.css">
