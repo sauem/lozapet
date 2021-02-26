@@ -1,5 +1,12 @@
-/woo-alidropship.zip
-/wordpress-5.6.zip
-/wp-content/uploads/
-/wp-content/themes/loza/
-/wp-config.php
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
